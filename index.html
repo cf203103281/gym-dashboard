@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Control - Dashboard</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f2f5; color: #333; display: flex; justify-content: center; padding: 40px; }
+        .container { background: white; padding: 30px; border-radius: 12px; max-width: 600px; width: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        h2 { color: #1a73e8; text-align: center; margin-bottom: 25px; }
+        label { font-weight: bold; display: block; margin-top: 15px; font-size: 0.9em; }
+        input, select { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; font-size: 1em; }
+        button { background: #1a73e8; color: white; border: none; padding: 15px; width: 100%; cursor: pointer; border-radius: 8px; font-size: 1em; font-weight: bold; margin-top: 25px; transition: background 0.3s; }
+        button:hover { background: #1557b0; }
+        #mensaje { margin-top: 25px; padding: 20px; display: none; border-radius: 8px; line-height: 1.6; border-left: 5px solid #1a73e8; }
+        .alert-bell { color: #d93025; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>🏋️‍♂️ Registro de Socios</h2>
+    
+    <label>Nombre del Cliente:</label>
+    <input type="text" id="cliente" placeholder="Ej: Giovanni Chicas">
+    
+    <label>Fecha de Pago:</label>
+    <input type="date" id="fechaPago">
+    
+    <label>Plan Contratado:</label>
+    <select id="plan">
+        <option value="30">Mes Completo (30 días)</option>
+        <option value="15">Media Membresía (15 días)</option>
+    </select>
+    
+    <button onclick="registrarPago()">Generar Registro</button>
+
+    <div id="mensaje"></div>
+</div>
+
+<script src="logica.js"></script>
+</body>
+</html>
