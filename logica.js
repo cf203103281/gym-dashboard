@@ -27,9 +27,7 @@ function registrarPago() {
     const txtVence = fechaVencimiento.toLocaleDateString('es-ES', formato);
     const txtAviso = fechaNotificacion.toLocaleDateString('es-ES', formato);
 
-    // =========================================================
-    // NUEVA PARTE: ENVÍO A GOOGLE SHEETS
-    // =========================================================
+
     const urlGoogleScript = "https://script.google.com/a/macros/uma.edu.sv/s/AKfycbxsgypFd2gxX23nClZu6sBoOJK74EOzRkzFlU1ApvUlpTm8_l-1jfsQefFjEW4jpqfd/exec"; 
 
     const datosParaEnviar = {
@@ -48,7 +46,7 @@ function registrarPago() {
     })
     .then(() => console.log("Datos enviados a la nube"))
     .catch(error => console.error("Error:", error));
-    // =========================================================
+   
 
     // 6. Mostrar el resultado en el Dashboard
     mensajeDiv.style.display = "block";
